@@ -1,6 +1,19 @@
 export default function Signup() {
+  function handleSubmit(event) {
+    event.preventDefault();
+
+    const userData = new FormData(event.target);
+    const acquisitionChannel = userData.getAll('acquisition');
+    const userDataObj = Object.fromEntries(userData.entries());
+    userDataObj.acquisition = acquisitionChannel;
+    console.log(userDataObj);
+
+    // reset form
+    event.target.reset(); // use it also with refs instead of doing it for each one alone.
+
+  }
   return (
-    <form>
+    <form onSubmit={handleSubmit}>
       <h2>Welcome on board!</h2>
       <p>We just need a little bit of data from you to get you started 🚀</p>
 

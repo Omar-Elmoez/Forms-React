@@ -65,18 +65,7 @@ fieldset {
   font-weight: bold;
 }
 
-.control input {
-  display: block;
-  width: 100%;
-  max-width: 15rem;
-  padding: 0.5rem;
-  font-size: 1rem;
-  border-radius: 4px;
-  border: 1px solid #758a8a;
-  background-color: #869999;
-  color: #142020;
-}
-
+.control input,
 .control select {
   display: block;
   width: 100%;
